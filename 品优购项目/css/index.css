@@ -1,0 +1,134 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+
+.newflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news .news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+
+.news-bd {
+    padding: 5px 15px 0;
+}
+
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 超出部分用省略号代替 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    /* 把多余的边框隐藏起来 */
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    /* 去掉上边框（因为已经有了，避免重叠） */
+    border-top: 0;
+}
+
+.lifeservice ul {
+    /* 防止盒子宽度过大，第四个盒子装不下，就把ul的宽度加大一点，再把多余的边框隐藏起来 */
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    /* 让文字居中，实际上是让i标签居中，然后让图片居中 */
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: url(../images/icons.png) no-repeat -19px -15px;
+    margin-top: 12px;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+
+.recom-hd {
+    float: left;
+    width: 205px;
+    height: 163px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom-bd {
+    float: left;
+}
+
+.recom-bd ul li {
+    position: relative;
+    float: left;
+}
+
+/* 强制设置设置图片大小，以后无论图片多大，在页面中只有这么大 */
+.recom-bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+/* 只有前三个有竖线 */
+.recom-bd ul li:nth-child(-n+3)::after {
+    content: '';
+    /* 加绝对地位放置竖线的位置，子绝父相 */
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}

@@ -1,0 +1,334 @@
+/* 字体图标申明,注意相对路径的变化 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?tomleg');
+    src:  url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+      url('../fonts/icomoon.woff?tomleg') format('woff'),
+      url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+/* 右浮动 */
+.fr {
+    float: right;
+}
+/* 设置为红色字体 */
+.style_red {
+    color: #c81623;
+}
+
+/* 快捷导航模块 */
+.shortcut {
+    /* 宽度要与body一致，所以不用设置 */
+    height: 31px;
+    background-color: #f1f1f1;
+    /* 内部的文字都要垂直居中 */
+    line-height: 31px;
+}
+/* 让导航栏左侧的模块左侧浮动，以保证在同一行上 */
+.shortcut ul li {
+    float: left;
+}
+
+/* 找出所有偶数的li来装“|”,而“|”其实是不存在的，用一个个极其修长的盒子的边框来充当了“|” */
+.shortcut .fr ul li:nth-child(even){
+    width: 1px;
+    height: 12px;
+    background-color: #666;
+    /* 因为盒子不是文字，所以没有垂直居中对齐，所以要自己加margin来保证垂直居中对齐、以及隔开左右间距（上、左右、下） */
+    margin: 9px 15px 0;
+}
+/* 设置伪元素来制作导航栏右侧字体图标（小三角）（after可以让伪标签里面的所有元素全都放在字体内容的后面） */
+.arrow-icon::after {
+    /* 必须要有content */
+    content: '\e91e';
+    /* 下面这一句申明也必须要有 */
+    font-family: 'icomoon';
+    margin-left: 6px;
+}
+
+/* header头部制作 子绝父相*/
+.header {
+    position: relative;
+    height: 105px;
+}
+/* 设置logo 子绝父相*/
+.logo {
+    position: absolute;
+    top: 25px;
+    width: 171px;
+    height: 61px;
+}
+.logo a {
+    /* 因为a是行内元素无法改大小，所以要改为行内元素再插入图片,而这里把a变大，自然就把父元素h1撑开了 */
+    display: block;
+    width: 171px;
+    height: 61px;
+    background: url(../images/logo.png) no-repeat;
+    /* 让a里面的文字隐藏 */
+    /* font-size: 0;方法1：直接让文字大小为0 （京东）*/
+    /* 方法2：淘宝的做法：让文字移动到最左侧，隐藏溢出的文字 */
+    text-indent: -1100px;
+    overflow: hidden;
+}
+/* 搜索模块的制作 */
+.search {
+    /* 定位、子绝父相 */
+    position: absolute;
+    left: 346px;
+    top: 25px;
+    width: 538px;
+    height: 36px;
+    /* 边框厚度，实线、红色 */
+    border: 2px solid #b1191a;
+}
+/* 搜索框设置 */
+.search input {
+    /* 加浮动，取消自动添加的边距（直接贴上去） */
+    float: left;
+    width: 454px;
+    height: 32px;
+    /* 让默认的文字与左侧边框有一点距离 */
+    padding-left: 10px;
+}
+.search button{
+    /* 加浮动，取消自动添加的边距（直接贴上去） */
+    float: left;
+    width: 80px;
+    height: 32px;
+    background-color: #b1191a;
+    /* 设置文字大小颜色 */
+    color: #fff;
+    font-size: 14px;
+}
+/* 设置热词、定位以及设置间距 */
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+}
+.hotwords a {
+    margin: 0 5px;
+}
+
+/* 购物车模块制作 */
+.shopcar {
+    /* 定位至右侧 */
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    width: 140px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    /* 文字垂直水平居中 */
+    line-height: 35px;
+    text-align: center;
+}
+/* 文字左边加入购物车图片 */
+.shopcar::before {
+    content: '\e93a';
+    font-family: 'icomoon';
+    margin-right: 5px;
+    color: #b1191a;
+}
+/* 文字右边加入小三角 */
+.shopcar::after {
+    content: '\e920';
+    font-family: 'icomoon';
+    margin-left: 10px;
+}
+/* count购物车统计模块 */
+.count {
+    /* 子绝父绝，定位到上边框 */
+    position: absolute;
+    top: -5px;
+    /* 用左对齐的原因，是为了当数字长度过大时，长度向右延长 */
+    left: 101px;
+    height: 14px;
+    /* 居中对齐，否则继承的行高是34px */
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    /* 用padding来拉开文字与盒子i之间的间距 */
+    padding: 0 5px;
+    /* 制作圆角（左上、右上、右下） */
+    border-radius: 7px 7px 7px 0;
+}
+
+/* nav模块制作 */
+.nav {
+    height: 47px;
+    /* 设置下边框（贯穿左右的一条线） */
+    border-bottom: 2px solid #b1191a;
+}
+/* 浮动使两个子盒子处于同一行 */
+.nav .dropdown {
+    float: left;
+    width: 210px;
+    height: 45px;
+    background-color: #b1191a;
+}
+.nav .navitems {
+    float: left;
+}
+/* 全部商品栏和它的各种子类 */
+.nav .dropdown .dt {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+}
+.nav .dropdown .dd {
+    
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+    /* 去掉和nav下边框多余的线 */
+    margin-top: 2px;
+}
+
+/* 导航详细分类制作，其中每一个链接a都由li标签来包装，设置宽高、背景时修改li，而设置文字时才用a标签 */
+.nav .dropdown .dd ul li {
+    /* 子绝父相，伪类的父标签是li */
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    /* 左侧的小缝隙 */
+    margin-left: 2px;
+    /* 文字离左边的距离 */
+    padding-left: 10px;
+}
+.nav .dropdown .dd ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+/* 在盒子li中制作after伪类小三角图标（因为内容要放在链接a的后面） */
+.nav .dropdown .dd ul li::after{
+    /* 把图标定位到盒子最右边 */
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #fff;
+    font-size: 14px;
+    content: '\e920';
+    font-family: 'icomoon';
+}
+
+/* 鼠标经过时的变化情况li和标签a（注意写法）的变化 */
+.nav .dropdown .dd ul li:hover {
+    background-color: #fff;
+}
+.nav .dropdown .dd ul li:hover a {
+    color: #c81623;
+}   
+
+/* 制作navitems里面的样式 */
+.navitems ul li {
+    /* 处于同一行 */
+    float: left;
+}
+.navitems ul li a {
+    /* 行内元素转换为块元素 */
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    /* 给a一个左右的padding值，有两个功能：1、使得每个a左右之间有一定的距离，2、同时，增加了a的范围，使得点击的范围更大 */
+    padding: 0 25px;
+}
+
+/* footer底部模型制作 */
+.footer {
+    height: 415px;
+    background-color: #f5f5f5;
+    /* 增加一个padding值，使得里面的内容离顶部有一定的距离，更好看 */
+    padding-top: 30px;
+}
+/* 制作服务模块 */
+.mod-service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.mod-service ul li {
+    /* 使他们在同一行上（用左浮动） */
+    float: left;
+    /* 内容离左边距35px */
+    padding-left: 35px;
+    width: 300px;
+    height: 50px;
+}
+/* 图片需要插在h5中，所以修改h5的样式就是在修改图片的样式 */
+.mod-service ul li h5 {
+    /* 为图片盒子加浮动之后，其他的文字就会围绕在盒子周围，不会占掉浮动起来的位置 */
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* 插入精灵图\不重复、左移252px、上移2px */
+    background: url(../images/icons.png) no-repeat -252px -2px;
+    /* 离右侧的文字也留有一定的距离 */
+    margin-right: 8px;
+}
+.service_txt h4 {
+    font-size: 14px;
+}
+.service_txt p {
+    font-size: 12px;
+}
+
+/* 制作mod_help帮助模块 */
+.mod_help {
+    height: 185px;
+    
+    margin: 0 auto;
+    /* 制作这个模块的下边框 */
+    border-bottom: 1px solid #ccc;
+    /* 给里面的内容有一个和上、左边框的距离 */
+    padding-top: 20px;
+    padding-left: 50px;
+}
+.mod_help dl dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.mod_help dl {
+    /* 一行显示，使用左浮动 */
+    float: right;
+    /* 为了加大间距，设置宽度 */
+    width: 200px;
+}
+/* 如果都是这么个宽度的话会有一个多出去，把最后一个的宽度调小 */
+.mod_help dl:last-child{
+    width: 90px;
+    text-align: center;
+}
+
+/* 设置版权模块的连接 */
+.mod_copyright {
+    /* 文字全部放中间 */
+    text-align: center;
+    /* 文字与边距有点间隔 */
+    padding-top: 20px;
+}
+.links {
+    margin-bottom: 15px;
+}
+.copyright {
+    /* 调整一下文字间距 */
+    line-height: 20px;
+}

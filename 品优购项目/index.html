@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- TDK三大标签优化（title） -->
+    <title>掌上汽车-共享汽车</title>
+    <!-- TDK-网站说明（description） -->
+    <meta name="description" content="掌上汽车-共享汽车" />
+    <!-- TDK-关键字（keyword） -->
+    <meta name="keywords" content="掌上汽车-共享汽车" />
+
+    <!-- 引入初始化样式CSS文件,路径的问题，不要写成"/css/base.css"!!!否则出错-->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引入公共样式CSS文件 -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 引入网站图标 -->
+    <link rel="shortcut icon" href="facvicon.ico">
+    <!-- 引入首页的样式文件index.css -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 快捷导航模块start -->
+    <section class="shortcut">
+        <!-- 先放一个版心 -->
+        <div class="w">
+            <!-- 放置左浮动的盒子（左侧导航栏） -->
+            <div class="fl">
+                <ul>
+                    <li>尊敬的用户,掌上汽车欢迎您！&nbsp;</li> <!-- &nbsp;表示空格 -->
+                    <li>
+                        <a href="#">请登录&nbsp;</a><a href="#" class="style_red">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 放置右浮动的盒子 -->
+            <div class="fr">
+                <ul>
+                    <!-- 文字、“|”都用单独的li来包装 -->
+                    <li>我的订单</li>
+                    <li></li>
+                    <li class="arrow-icon">我的汽车</li>
+                    <li></li>
+                    <li>我的会员</li>
+                    <li></li>
+                    <li>企业采购</li>
+                    <li></li>
+                    <li class="arrow-icon">关注我们</li>
+                    <li></li>
+                    <li class="arrow-icon">客户服务</li>
+                    <li></li>
+                    <li class="arrow-icon">网站导航</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 快捷导航模块end -->
+
+    <!-- header头部模块制作 start -->
+    <header class="header w">
+        <!-- 1\logo模块 -->
+        <div class="logo">
+            <h1>
+                <!-- 还要给文字加一个title属性，保证鼠标移动过去后会有小提示 -->
+                <a href="index.html" title="掌上汽车-共享汽车">掌上汽车-共享汽车</a>
+            </h1>
+        </div>
+        <!-- 2\搜索search模块 -->
+        <div class="search">
+            <!-- 搜索框（记得在base里面取消外边框和边框颜色，记得用placeholder设置默认文字） -->
+            <input type="search" name="" id="" placeholder="搜索附近的共享汽车">
+            <!-- 搜索按钮 -->
+            <button>搜索</button>
+        </div>
+        <!-- 3\hotwords模块制作 -->
+        <div class="hotwords">
+            <!-- 第一个链接是红色的样式 -->
+            <a href="#" class="style_red">优惠租车</a>
+            <a href="#">附近租车点</a>
+            <a href="#">租车优惠</a>
+            <a href="#">附近商圈</a>
+            <a href="#">同城论坛</a>
+        </div>
+        <!-- 4\功能导航栏模块制作 -->
+        <div class="shopcar">
+            我的租车订单
+            <!-- 制作count租车统计模块 -->
+            <i class="count">8</i>
+        </div>
+    </header>
+    <!-- header头部模块制作 end -->
+
+    <!-- nav导航模块制作 start -->
+    <nav class="nav">
+        <!-- 版心 -->
+        <div class="w">
+            <!-- 左侧dropdown盒子（全部商品） -->
+            <div class="dropdown">
+                <div class="dt">全部功能分类</div>
+                <!-- 导航详细分类制作 -->
+                <div class="dd">
+                    <ul>
+                        <li><a href="#">附近的可用车辆查询</a> </li>
+                        <li><a href="#">可租车停车场查询</a></li>
+                        <li><a href="#">实名认证平台</a> </li>
+                        <li><a href="#">驾照认证</a> </li>
+                        <li><a href="#">驾照扣分情况查询</a> </li>
+                        <li><a href="#">城市道路拥堵情况查询</a> </li>
+                        <li><a href="#">出行道路规划导航</a> </li>
+                        <li><a href="#">同城消费出行指南</a> </li>
+                        <li><a href="#">车友社区论坛</a> </li>
+                        <li><a href="#">故障报修</a> </li>
+                        <li><a href="#">人工服务</a> </li>
+                        <li><a href="#">评论反馈</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧navitems盒子（相关分类） -->
+            <div class="navitems">
+                <ul>
+                    <li><a href="#">优惠租车</a></li>
+                    <li><a href="#">附近租车点</a></li>
+                    <li><a href="#">车评论坛</a></li>
+                    <li><a href="#">附近商圈</a></li>
+                    <li><a href="#">同城论坛</a></li>
+                    <li><a href="#">会员中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav导航模块制作 end -->
+
+    <!-- 首页专有的模块制作 start -->
+    <div class="w">
+        <div class="main">
+            <!-- 焦点图 -->
+            <div class="focus">
+                <!-- 由于轮播图的特性，放置图片应该以ul加li的方式，方便js的动态交互 -->
+                <ul>
+                    <li><img src="upload/focus1.png" alt=""></li>
+                </ul>
+            </div>
+            <!-- 快报 -->
+            <div class="newflash">
+                <!-- 1\新闻模块 -->
+                <div class="news">
+                    <div class="news-hd">
+                        <h5>掌车快报</h5>
+                        <a href="#" class="more">更多</a>
+                    </div>
+                    <div class="news-bd">
+                        <ul>
+                            <li><a href="#"><strong>[重磅]</strong>国权北路堵车！</a></li>
+                            <li><a href="#"><strong>[重磅]</strong>滨江大道堵车！</a></li>
+                            <li><a href="#"><strong>[重磅]</strong>优惠券到期！</a></li>
+                            <li><a href="#"><strong>[重磅]</strong>本周快报</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 2\生活服务模块 -->
+                <div class="lifeservice">
+                    <ul>
+                        <li>
+                            <i></i>
+                            <p>我的余额</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>充值</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>我的会员</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>我的声望</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>信用等级</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>社区声望</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>我的订单</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>浏览记录</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 3\广告模块 -->
+                <div class="bargain">
+                    <img src="upload/bargain.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 首页专有的模块制作 end -->
+
+
+    <!-- footer底部模块制作 start -->
+    <div class="footer">
+        <!-- 制作mod-help帮助模块 -->
+        <div class="mod_help">
+            <dl></dl>
+            <dl>
+                <dt>帮助中心</dt>
+                <dd>
+                    <img src="images/wx_cz.jpg" alt="">
+                    掌上汽车客户端
+                </dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">加入我们</a></dd>
+                <dd><a href="#">练习客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">加入我们</a></dd>
+                <dd><a href="#">练习客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">加入我们</a></dd>
+                <dd><a href="#">练习客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">加入我们</a></dd>
+                <dd><a href="#">练习客服</a></dd>
+            </dl>
+            <dl>
+                <dt>服务指南</dt>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">加入我们</a></dd>
+                <dd><a href="#">练习客服</a></dd>
+            </dl>
+            <dl></dl>
+        </div>
+        <!-- 制作版权信息模块mod_copyright -->
+        <div class="mod_copyright">
+            <!-- 第一行的内容、各种连接 -->
+            <div class="links">
+                <a href="#">关于我们</a> |
+                <a href="#">联系我们</a> |
+                <a href="#">联系客服</a> |
+                <a href="#">商圈入驻</a> |
+                <a href="#">营销中心</a> |
+                <a href="#">手机app</a> |
+                <a href="#">友情链接</a> |
+                <a href="#">销售联盟</a> |
+                <a href="#">社区系统</a> |
+                <a href="#">English Site</a> |
+                <a href="#">Contact U</a>
+            </div>
+            <!-- 第2、3行的内容，存放版权信息 -->
+            <div class="copyright">
+                地址：上海市杨浦区国定路777号 邮编：100000 电话：111-111-111 传真：111-111-111 邮箱: xxxxxxxxxx.cn <br>
+                沪ICP备xxx号京公网安备xxxxxxxx
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- footer底部模块制作 end -->
+</body>
+
+</html>
